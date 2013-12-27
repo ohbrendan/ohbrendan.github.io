@@ -131,9 +131,9 @@ $(document).ready(function(){
   // tweets
   $(function(){
     $("#tweets").tweetMachine('', {
-      backendScript: 'http://www.scala-lang.org/webscripts/ajax/getFromTwitter.php?callback=?',
+      backendScript: 'http://ohbrendan-tweetmachine.herokuapp.com/ajax/getFromTwitter.php?callback=?',
       endpoint: 'statuses/user_timeline',
-      user_name: 'scala_lang',
+      user_name: 'ahbrendan',
       include_retweets: true,
       exclude_replies: false,
       limit: 4,
