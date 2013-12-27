@@ -1,20 +1,24 @@
 <figure class="code concurrency" style="width: 450px; margin-top: 20px;">
-  <figcaption>Concurrent/Distributed</figcaption>
-  <pre><code>val x = future { someExpensiveComputation() }
-val y = future { someOtherExpensiveComputation() }
-val z = for (a &lt;- x; b &lt;- y) yield a*b
-for (c &lt;- z) println("Result: " + c)
-println("Meanwhile, the main thread goes on!")</code></pre>
+  <figcaption>Albert Einstein</figcaption>
+  <pre><code>In the temple of science are many mansions, and 
+various indeed are they that dwell therein and 
+the motives that have led them thither. Many take 
+to science out of a joyful sense of superior 
+intellectual power; science is their own special 
+sport to which they look for vivid experience and 
+the satisfaction of ambition; many others are to 
+be found in the temple who have offered the 
+products of their brains on this altar for purely 
+utilitarian purposes. Were an angel of the Lord 
+to come and drive all the people belonging to 
+these two categories out of the temple, the 
+assemblage would be seriously depleted, but there 
+would still be some men, of both present and past 
+times, left inside. Our Planck is one of them, and 
+that is why we love him. </code></pre>
 </figure>
 
 <div class="snippet-explanation">
-  <h3>Go Concurrent or Distributed with Futures &amp; Promises</h3>
-<p>In Scala, futures and promises can be used to process data <i>asynchronously</i>, making it easier to parallelize or even distribute your application.</p>
-<p>
-In this example, the <code>future{}</code> construct evaluates its argument asynchronously, and returns
-a handle to the asynchronous result as a <code>Future[Int]</code>.
-For-comprehensions can be used to register new callbacks (to post new things to do) when the future is
-completed, i.e., when the computation is finished.
-And since all this is executed asynchronously, without blocking, the main
-program thread can continue doing other work in the meantime.
-</p></div>
+  <h3>Research Time Will Never Be Over</h3>
+<p>In Oh Brendan, we believe in exploration even if it may destroy the world.</p>
+<p>Research makes <code>Advancement</code>. And <code>Advancement</code> makes a better world. A better world is the live of the Land of Freedom. And that is the reason why we treasure it so much.</p></div>

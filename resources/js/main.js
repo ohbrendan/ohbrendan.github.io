@@ -173,7 +173,7 @@ function styleCode() {
   var a = false;
   $("pre code").parent().each(function() {
     if (!$(this).hasClass("prettyprint")) {
-      $(this).addClass("prettyprint lang-scala linenums");
+      $(this).addClass("prettyprint lang-wiki linenums");
       a = true
     }
   });
@@ -373,7 +373,7 @@ $(document).ready(function(){
   }
 
   var scalaLangTrainings = [
-  {% for training in site.categories.training %}
+  {% for training in site.categories.dos %}
   {% if training.date >= site.time %}{% comment %} No point in including outdated training sessions {% endcomment %}
     {
       title: "{{ training.title }}",
@@ -383,11 +383,10 @@ $(document).ready(function(){
         {
           where: "{{ training.where }}",
           when: "{{ training.when }}",
-          trainers: "{{ training.trainers }}",
-          organizer: "{{ training.organizer }}",
-          status: "{{ training.status }}"
         }
-      ]
+      ],
+      involver: "{{ training.involver }}",
+      theme: "{{ training.theme }}"
     },
   {% endif %}
   {% endfor%}
@@ -405,9 +404,8 @@ $(document).ready(function(){
           url: training.url,
           where: session.where,
           when: session.when,
-          trainers: session.trainers,
-          organizer: session.organizer,
-          status: session.status
+          involver: training.involver,
+          theme: training.theme
         });
       }
     }
@@ -437,8 +435,8 @@ $(document).ready(function(){
             '</div>'+
             '<div class="training-float-right">' +
               '<div class="training-location">'+training.where+'</div>' +
-              '<div class="training-trainers-name"> By '+training.trainers+'</div>' +
-              '<div class="training-organizer">'+training.organizer+'</div>' +
+              '<div class="training-trainers-name">With ' +training.involver+'</div>' +
+              '<div class="training-organizer">'+training.theme+'</div>' +
             '</div>' +
           '</div>' +
         '</div>';

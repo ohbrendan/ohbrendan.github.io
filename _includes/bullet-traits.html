@@ -1,41 +1,32 @@
-{% comment %}
-Borrowed from
-http://gleichmann.wordpress.com/2009/10/21/scala-in-practice-composing-traits-lego-style/
-{% endcomment %}
-
 <figure class="code traits" style="width: 450px;">
-  <figcaption>Traits</figcaption>
-  <pre><code>abstract class Spacecraft {
-  def engage(): Unit
-}
-trait CommandoBridge extends Spacecraft {
-  def engage(): Unit = {
-    for (_ &lt;- 1 to 3)
-      speedUp()
-  }
-  def speedUp(): Unit
-}
-trait PulseEngine extends Spacecraft {
-  val maxPulse: Int
-  var currentPulse: Int = 0
-  def speedUp(): Unit = {
-    if (currentPulse &lt; maxPulse)
-      currentPulse += 1
-  }
-}
-class StarCruiser extends Spacecraft
-                     with CommandoBridge
-                     with PulseEngine {
-  val maxPulse = 200
-}</code></pre>
+  <figcaption>John Lennon, in "Imagine"</figcaption>
+  <pre><code>Imagine there's no heaven
+It's easy if you try
+No hell below us
+Above us only sky
+Imagine all the people living for today
+
+Imagine there's no countries
+It isn't hard to do
+Nothing to kill or die for
+And no religion too
+Imagine all the people living life in peace
+
+You, you may say 
+I'm a dreamer, but I'm not the only one
+I hope some day you'll join us
+And the world will be as one
+
+Imagine no possessions
+I wonder if you can
+No need for greed or hunger
+A brotherhood of man
+Imagine all the people sharing all the world
+</code></pre>
 </figure>
 
 <div class="snippet-explanation">
-  <h3>Flexibly Combine Interface &amp; Behavior</h3>
-  <p>
-In Scala, <i>multiple traits</i> can be mixed into a class to combine their interface and their
-behavior.</p>
-<p>Here, a <code>StarCruiser</code> is a <code>Spacecraft</code> with a <code>CommandoBridge</code> that knows how to
-engage the ship (provided a means to speed up) and a <code>PulseEngine</code> that
-specifies how to speed up.
+  <h3>Imagination is Reality</h3>
+  <p>In Oh Brendan, <i>imagination</i> is more important than <code>Reality</code></p>
+<p>Thanks to the ancient and mysterious technology, we treasure <i>imagination</i>. And we cannot live without it.
 </p></div>

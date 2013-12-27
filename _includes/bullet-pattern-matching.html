@@ -1,27 +1,25 @@
 <figure class="code pattern-matching" style="width: 500px; float: right;">
-  <figcaption>Pattern matching</figcaption>
-  <pre><code>// Define a set of case classes for representing binary trees.
-sealed abstract class Tree
-case class Node(elem: Int, left: Tree, right: Tree) extends Tree
-case object Leaf extends Tree
-
-// Return the in-order traversal sequence of a given tree.
-def inOrder(t: Tree): List[Int] = t match {
-  case Node(e, l, r) => inOrder(l) ::: List(e) ::: inOrder(r)
-  case Leaf          => List()
-}</code></pre>
+  <figcaption>Elizabeth Barrett Browning, Aurora Leigh (1856)</figcaption>
+  <pre><code>Books, books, books!
+I had found the secret of a garret room
+Piled high with cases in my father's name;
+Piled high, packed large,—where, creeping in and out
+Among the giant fossils of my past,
+Like some small nimble mouse between the ribs
+Of a mastodon, I nibbled here and there
+At this or that box, pulling through the gap,
+In heats of terror, haste, victorious joy,
+The first book first. And how I felt it beat
+Under my pillow, in the morning's dark,
+An hour before the sun would let me read!
+My books!
+At last, because the time was ripe,
+I chanced upon the poets.</code></pre>
 </figure>
 
 <div class="snippet-explanation" style="width: 350px;">
-  <h3>Switch on the structure of your data</h3>
-<p>In Scala, <em>case classes</em> are used to represent structural data
-types. They implicitly equip the class with meaningful <code>toString</code>,
-<code>equals</code> and <code>hashCode</code> methods, as well as the
-ability to be deconstructed with <em>pattern matching</em>.</p>
+  <h3>A Thousand Lives</h3>
+<p>All citizens of Oh Brendan have their own interesting lives. They live a thousand lives because they meet interesting people and creatures. This is a beautiful place, where you must come and enjoy.</p>
 <p>
-In this example, we define a small set of case classes that represent binary
-trees of integers (the generic version is omitted for simplicity here).
-In <code>inOrder</code>, the <code>match</code> construct chooses the right
-branch, depending on the type of <code>t</code>, and at the same time
-deconstructs the arguments of a <code>Node</code>.
+We treasure others. We love sharing, and it gives us interesting lives. <code>Forever</code> is the way we feel about it.
 </p></div>

@@ -2,6 +2,6 @@ title: Oh Brendan
 
 scalaversion: "2.10.3"
 devscalaversion: "2.11.0-M7"
-scala_maindownload_unix: "/files/archive/scala-2.10.3.tgz"
-scala_maindownload_windows: "/files/archive/scala-2.10.3.msi"
+scala_maindownload_unix: "/labs"
+scala_maindownload_windows: "/labs"
 baseurl: ""

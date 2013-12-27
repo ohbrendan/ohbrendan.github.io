@@ -1,6 +1,6 @@
 ---
 layout: page-no-toc
-title: Training
+title: Days of Significance
 ---
 
 <div id="trainingspane" class="trainings-page"> </div>

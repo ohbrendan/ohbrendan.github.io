@@ -1,40 +1,17 @@
 <figure class="code type-inference" style="width: 450px; margin-top: 20px;">
-  <figcaption>Type inference</figcaption>
-  <pre><code>scala> class Person(val name: String, val age: Int) {
-     |   override def toString = s"$name ($age)"
-     | }
-defined class Person
-
-scala> def underagePeopleNames(persons: List[Person]) = {
-     |   for (person &lt;- persons; if person.age &lt; 18)
-     |     yield person.name
-     | }
-underagePeopleNames: (persons: List[Person])List[String]
-
-scala> def createRandomPeople() = {
-     |   val names = List("Alice", "Bob", "Carol",
-     |       "Dave", "Eve", "Frank")
-     |   for (name &lt;- names) yield {
-     |     val age = (Random.nextGaussian()*8 + 20).toInt
-     |     new Person(name, age)
-     |   }
-     | }
-createRandomPeople: ()List[Person]
-
-scala> val people = createRandomPeople()
-people: List[Person] = List(Alice (16), Bob (16), Carol (19), Dave (18), Eve (26), Frank (11))
-
-scala> underagePeopleNames(people)
-res1: List[String] = List(Alice, Bob, Frank)</code></pre>
+  <figcaption>Stanzas on Freedom</figcaption>
+  <pre><code>Is true Freedom but to break
+Fetters for our own dear sake,
+And, with leathern hearts, forget
+That we owe mankind a debt?
+No! true freedom is to share
+All the chains our brothers wear,
+And, with heart and hand, to be
+Earnest to make others free!</code></pre>
 </figure>
 
 <div class="snippet-explanation">
-  <h3>Let the compiler figure out the types for you</h3>
-<p>The Scala compiler is smart about static types. Most of the time, you need
-not tell it the types of your variables. Instead, its powerful type inference
-will figure them out for you.</p>
-<p>
-In this interactive REPL session (Read-Eval-Print-Loop), we define a
-class and two functions. You can observe that the compiler infers the result
-types of the functions automatically, as well as all the intermediate values.
+  <h3>Freedom is Just Around</h3>
+<p>Oh Brendan is also known as the Land of Freedom. The ancient and mysterious technology allows it to be built with not many physical limitation.</p>
+<p>Freedom is just around because you are where Oh Brendan is. <code>Quantum Mechanics</code> indicates that Oh Brendan exists in different <code>Spatial Dimensions</code> but in same <code>Time dimension</code>. That is where the freedom comes from.
 </p></div>
