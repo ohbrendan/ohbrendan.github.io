@@ -614,35 +614,13 @@ $(document).ready(function(){
 /**************************
  * Google Analytics       *
  **************************/
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-574683-6']);
-_gaq.push(['_trackPageview']);
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-var f = function(event){
-  var href = $(this).attr('href');
-  var target = $(this).attr('target');
-  _gaq.push(['_trackEvent','Downloads','Download',href]);
-  if (target === undefined || target.toLowerCase() != '_blank') {
-    setTimeout(function() { location.href = href; }, 200);
-    return false;
-  }
-};
-function endsWith(str, suffix) {
-    if (str && suffix)
-      return str.indexOf(suffix, str.length - suffix.length) !== -1;
-}
-$(function(){
-  $('a').filter(function(){
-    var href = $(this).attr('href');
-    return !(endsWith(href,'/') || endsWith(href,'html') || $(this).hasClass('no-analytics'));
-  }).click(f);
-});
-
+ga('create', 'UA-46729789-1', 'ohbrendan.com');
+ga('send', 'pageview');
 
 
 
