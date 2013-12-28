@@ -1,4 +1,5 @@
 ---
+layout: page
 title: Into New Year
 dos_title: Welcome 2014
 dos_time: 2014-01-01 23:59:59 +0800
