@@ -272,18 +272,22 @@ $(document).ready(function(){
   }
 
   var scalaLangEvents = [
-  {% for event in site.categories.events %}
-  {% if event.date >= site.time %}{% comment %} No point in including outdated events {% endcomment %}
+  {% for item in site.posts %}
+  {% for tag in item.tags %}
+  {% if tag == 'event' %}
+  {% if item.date >= site.time %}
     {
-      "title": "{{ event.title }}",
-      "logo": "{{ event.logo }}",
-      "location": "{{ event.location }}",
-      "start": "{{ event.start }}",
-      "end": "{{ event.end }}",
-      "url": "{{ event.link-out }}",
+      "title": "{{ item.title }}",
+      "logo": "{{ item.logo }}",
+      "location": "{{ item.location }}",
+      "start": "{{ item.start }}",
+      "end": "{{ item.end }}",
+      "url": "{{ item.url }}",
     },
   {% endif %}
-  {% endfor%}
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
   ];
 
   function doPopulateEventsPane(allEvents) {
@@ -373,23 +377,27 @@ $(document).ready(function(){
   }
 
   var scalaLangTrainings = [
-  {% for training in site.categories.dos %}
-  {% if training.date >= site.time %}{% comment %} No point in including outdated training sessions {% endcomment %}
+  {% for item in site.posts %}
+  {% for tag in item.tags %}
+  {% if tag == 'dos' %}
+  {% if item.dos_time >= site.time %}
     {
-      title: "{{ training.title }}",
-      description: "{{ training.description }}",
-      url: "{{ training.link-out }}",
+      title: "{{ item.dos_title }}",
+      description: "{{ item.description }}",
+      url: "{{ item.url }}",
       sessions: [
         {
-          where: "{{ training.where }}",
-          when: "{{ training.when }}",
+          where: "{{ item.where }}",
+          when: "{{ item.when }}",
         }
       ],
-      involver: "{{ training.involver }}",
-      theme: "{{ training.theme }}"
+      involver: "{{ item.involver }}",
+      theme: "{{ item.theme }}"
     },
   {% endif %}
-  {% endfor%}
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
   ];
 
   function flattenSessions(trainings) {

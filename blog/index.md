@@ -8,15 +8,12 @@ title: Blog
   {% include render-news-item.html %}
 {% endfor %}
 
+# Previous Posts
 <ul class="post-list">
   {% for p in site.tags.blog-post limit: 30 %}
   <li>
-    {% if p.link-out %}
-      <a href="{{ p.link-out }}">{{ p.title }}</a>
-    {% else %}
-      <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
-    {% endif %}
-      <span class="date">( {{ p.date | date: "%A, %B %d, %Y" }} )</span>
+    <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+    <span class="date">( {{ p.date | date: "%A, %B %d, %Y" }} )</span>
   </li>
   {% endfor %}
 </ul>
